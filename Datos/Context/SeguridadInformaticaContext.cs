@@ -37,7 +37,7 @@ public partial class SeguridadInformaticaContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["SqlServer"].ConnectionString,b => b.MigrationsAssembly("Datos"));
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString,b => b.MigrationsAssembly("Datos"));
         }
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

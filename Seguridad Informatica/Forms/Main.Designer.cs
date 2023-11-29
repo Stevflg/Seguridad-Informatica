@@ -38,6 +38,7 @@
             ClientSize = new Size(774, 406);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Main";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu Principal";
             ResumeLayout(false);
         }

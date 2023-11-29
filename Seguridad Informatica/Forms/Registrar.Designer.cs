@@ -40,6 +40,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar));
             TextBoxNombre = new Guna.UI2.WinForms.Guna2TextBox();
             TextBoxCorreo = new Guna.UI2.WinForms.Guna2TextBox();
             TextBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,7 +51,7 @@
             LabelUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             LabelContraseña = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ButtonCancelar = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            ButtonGuardar = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // TextBoxNombre
@@ -139,7 +140,7 @@
             LabelHead.BackColor = Color.Transparent;
             LabelHead.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LabelHead.ForeColor = SystemColors.ControlDarkDark;
-            LabelHead.Location = new Point(181, 40);
+            LabelHead.Location = new Point(170, 31);
             LabelHead.Name = "LabelHead";
             LabelHead.Size = new Size(141, 23);
             LabelHead.TabIndex = 4;
@@ -205,30 +206,32 @@
             ButtonCancelar.Size = new Size(134, 40);
             ButtonCancelar.TabIndex = 9;
             ButtonCancelar.Text = "Cancelar";
+            ButtonCancelar.Click += ButtonCancelar_Click;
             // 
-            // guna2Button1
+            // ButtonGuardar
             // 
-            guna2Button1.BorderRadius = 6;
-            guna2Button1.CustomizableEdges = customizableEdges11;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(250, 246);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button1.Size = new Size(134, 40);
-            guna2Button1.TabIndex = 10;
-            guna2Button1.Text = "Guardar";
+            ButtonGuardar.BorderRadius = 6;
+            ButtonGuardar.CustomizableEdges = customizableEdges11;
+            ButtonGuardar.DisabledState.BorderColor = Color.DarkGray;
+            ButtonGuardar.DisabledState.CustomBorderColor = Color.DarkGray;
+            ButtonGuardar.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ButtonGuardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ButtonGuardar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ButtonGuardar.ForeColor = Color.White;
+            ButtonGuardar.Location = new Point(250, 246);
+            ButtonGuardar.Name = "ButtonGuardar";
+            ButtonGuardar.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            ButtonGuardar.Size = new Size(134, 40);
+            ButtonGuardar.TabIndex = 10;
+            ButtonGuardar.Text = "Guardar";
+            ButtonGuardar.Click += ButtonGuardar_Click;
             // 
             // Registrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 346);
-            Controls.Add(guna2Button1);
+            Controls.Add(ButtonGuardar);
             Controls.Add(ButtonCancelar);
             Controls.Add(LabelContraseña);
             Controls.Add(LabelUsuario);
@@ -240,7 +243,9 @@
             Controls.Add(TextBoxCorreo);
             Controls.Add(TextBoxNombre);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Registrar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Registrar";
             ResumeLayout(false);
             PerformLayout();
@@ -258,6 +263,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelUsuario;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelContraseña;
         private Guna.UI2.WinForms.Guna2Button ButtonCancelar;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button ButtonGuardar;
     }
 }
