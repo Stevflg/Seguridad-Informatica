@@ -6,5 +6,6 @@ namespace Seguridad_Informatica
         {
             InitializeComponent();
         }
+
     }
 }

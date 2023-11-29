@@ -43,6 +43,7 @@
             pictureBoxEmail = new PictureBox();
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
+            LinkAyuda = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxEmail).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -64,6 +65,7 @@
             ButtonLogin.Size = new Size(97, 27);
             ButtonLogin.TabIndex = 17;
             ButtonLogin.Text = "Iniciar Sesion";
+            ButtonLogin.Click += ButtonLogin_Click;
             // 
             // LabelContraseña
             // 
@@ -100,7 +102,7 @@
             TextBoxContraseña.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             TextBoxContraseña.Location = new Point(79, 203);
             TextBoxContraseña.Name = "TextBoxContraseña";
-            TextBoxContraseña.PasswordChar = '\0';
+            TextBoxContraseña.PasswordChar = '*';
             TextBoxContraseña.PlaceholderText = "Contraseña";
             TextBoxContraseña.SelectedText = "";
             TextBoxContraseña.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -158,11 +160,23 @@
             pictureBox2.TabIndex = 20;
             pictureBox2.TabStop = false;
             // 
+            // LinkAyuda
+            // 
+            LinkAyuda.AutoSize = true;
+            LinkAyuda.Location = new Point(114, 301);
+            LinkAyuda.Name = "LinkAyuda";
+            LinkAyuda.Size = new Size(128, 15);
+            LinkAyuda.TabIndex = 21;
+            LinkAyuda.TabStop = true;
+            LinkAyuda.Text = "¿Olvido su contraseña?";
+            LinkAyuda.LinkClicked += LinkAyuda_LinkClicked;
+            // 
             // Inicio_Sesion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(350, 327);
+            ClientSize = new Size(350, 331);
+            Controls.Add(LinkAyuda);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBoxEmail);
@@ -193,5 +207,6 @@
         private PictureBox pictureBoxEmail;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
+        private LinkLabel LinkAyuda;
     }
 }

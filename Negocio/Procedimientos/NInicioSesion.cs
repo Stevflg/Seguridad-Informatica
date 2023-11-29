@@ -32,7 +32,7 @@ namespace Negocio.Procedimientos
                         if (!result)
                         { 
                             usuario.Contador += 1;
-                            usuario.Bloqueado = (usuario.Contador>3) ? true : false;
+                            usuario.Bloqueado = (usuario.Contador>2) ? true : false;
                             context.Entry(usuario).State = EntityState.Modified;
                             await context.SaveChangesAsync();
                             return result;

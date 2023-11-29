@@ -65,7 +65,7 @@
             TextBoxNombre.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             TextBoxNombre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TextBoxNombre.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            TextBoxNombre.Location = new Point(33, 112);
+            TextBoxNombre.Location = new Point(41, 100);
             TextBoxNombre.Name = "TextBoxNombre";
             TextBoxNombre.PasswordChar = '\0';
             TextBoxNombre.PlaceholderText = "Nombre";
@@ -85,7 +85,7 @@
             TextBoxCorreo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             TextBoxCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TextBoxCorreo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            TextBoxCorreo.Location = new Point(33, 175);
+            TextBoxCorreo.Location = new Point(41, 163);
             TextBoxCorreo.Name = "TextBoxCorreo";
             TextBoxCorreo.PasswordChar = '\0';
             TextBoxCorreo.PlaceholderText = "Correo";
@@ -105,7 +105,7 @@
             TextBoxUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             TextBoxUsername.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TextBoxUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            TextBoxUsername.Location = new Point(250, 112);
+            TextBoxUsername.Location = new Point(258, 100);
             TextBoxUsername.Name = "TextBoxUsername";
             TextBoxUsername.PasswordChar = '\0';
             TextBoxUsername.PlaceholderText = "Usuario";
@@ -125,9 +125,9 @@
             TextBoxContraseña.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             TextBoxContraseña.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             TextBoxContraseña.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            TextBoxContraseña.Location = new Point(250, 175);
+            TextBoxContraseña.Location = new Point(258, 163);
             TextBoxContraseña.Name = "TextBoxContraseña";
-            TextBoxContraseña.PasswordChar = '\0';
+            TextBoxContraseña.PasswordChar = '*';
             TextBoxContraseña.PlaceholderText = "Contraseña";
             TextBoxContraseña.SelectedText = "";
             TextBoxContraseña.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -140,7 +140,7 @@
             LabelHead.BackColor = Color.Transparent;
             LabelHead.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LabelHead.ForeColor = SystemColors.ControlDarkDark;
-            LabelHead.Location = new Point(170, 31);
+            LabelHead.Location = new Point(178, 19);
             LabelHead.Name = "LabelHead";
             LabelHead.Size = new Size(141, 23);
             LabelHead.TabIndex = 4;
@@ -151,7 +151,7 @@
             LabelNombre.BackColor = Color.Transparent;
             LabelNombre.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LabelNombre.ForeColor = SystemColors.ControlDarkDark;
-            LabelNombre.Location = new Point(33, 87);
+            LabelNombre.Location = new Point(41, 75);
             LabelNombre.Name = "LabelNombre";
             LabelNombre.Size = new Size(53, 19);
             LabelNombre.TabIndex = 5;
@@ -162,7 +162,7 @@
             LabelCorreo.BackColor = Color.Transparent;
             LabelCorreo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LabelCorreo.ForeColor = SystemColors.ControlDarkDark;
-            LabelCorreo.Location = new Point(33, 151);
+            LabelCorreo.Location = new Point(41, 139);
             LabelCorreo.Name = "LabelCorreo";
             LabelCorreo.Size = new Size(114, 19);
             LabelCorreo.TabIndex = 6;
@@ -173,7 +173,7 @@
             LabelUsuario.BackColor = Color.Transparent;
             LabelUsuario.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LabelUsuario.ForeColor = SystemColors.ControlDarkDark;
-            LabelUsuario.Location = new Point(250, 87);
+            LabelUsuario.Location = new Point(258, 75);
             LabelUsuario.Name = "LabelUsuario";
             LabelUsuario.Size = new Size(122, 19);
             LabelUsuario.TabIndex = 7;
@@ -184,7 +184,7 @@
             LabelContraseña.BackColor = Color.Transparent;
             LabelContraseña.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LabelContraseña.ForeColor = SystemColors.ControlDarkDark;
-            LabelContraseña.Location = new Point(250, 151);
+            LabelContraseña.Location = new Point(258, 139);
             LabelContraseña.Name = "LabelContraseña";
             LabelContraseña.Size = new Size(72, 19);
             LabelContraseña.TabIndex = 8;
@@ -200,7 +200,7 @@
             ButtonCancelar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             ButtonCancelar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ButtonCancelar.ForeColor = Color.White;
-            ButtonCancelar.Location = new Point(99, 246);
+            ButtonCancelar.Location = new Point(107, 234);
             ButtonCancelar.Name = "ButtonCancelar";
             ButtonCancelar.ShadowDecoration.CustomizableEdges = customizableEdges10;
             ButtonCancelar.Size = new Size(134, 40);
@@ -218,7 +218,7 @@
             ButtonGuardar.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             ButtonGuardar.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ButtonGuardar.ForeColor = Color.White;
-            ButtonGuardar.Location = new Point(250, 246);
+            ButtonGuardar.Location = new Point(258, 234);
             ButtonGuardar.Name = "ButtonGuardar";
             ButtonGuardar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             ButtonGuardar.Size = new Size(134, 40);
@@ -230,7 +230,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(489, 346);
+            ClientSize = new Size(489, 325);
             Controls.Add(ButtonGuardar);
             Controls.Add(ButtonCancelar);
             Controls.Add(LabelContraseña);
