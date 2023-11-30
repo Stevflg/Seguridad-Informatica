@@ -63,7 +63,7 @@
             ButtonLogin.Name = "ButtonLogin";
             ButtonLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             ButtonLogin.Size = new Size(97, 27);
-            ButtonLogin.TabIndex = 17;
+            ButtonLogin.TabIndex = 2;
             ButtonLogin.Text = "Iniciar Sesion";
             ButtonLogin.Click += ButtonLogin_Click;
             // 
@@ -107,7 +107,7 @@
             TextBoxContraseña.SelectedText = "";
             TextBoxContraseña.ShadowDecoration.CustomizableEdges = customizableEdges4;
             TextBoxContraseña.Size = new Size(200, 33);
-            TextBoxContraseña.TabIndex = 12;
+            TextBoxContraseña.TabIndex = 1;
             // 
             // TextBoxCorreo
             // 
@@ -127,7 +127,7 @@
             TextBoxCorreo.SelectedText = "";
             TextBoxCorreo.ShadowDecoration.CustomizableEdges = customizableEdges6;
             TextBoxCorreo.Size = new Size(200, 33);
-            TextBoxCorreo.TabIndex = 11;
+            TextBoxCorreo.TabIndex = 0;
             // 
             // pictureBoxEmail
             // 
@@ -166,7 +166,7 @@
             LinkAyuda.Location = new Point(114, 301);
             LinkAyuda.Name = "LinkAyuda";
             LinkAyuda.Size = new Size(128, 15);
-            LinkAyuda.TabIndex = 21;
+            LinkAyuda.TabIndex = 3;
             LinkAyuda.TabStop = true;
             LinkAyuda.Text = "¿Olvido su contraseña?";
             LinkAyuda.LinkClicked += LinkAyuda_LinkClicked;

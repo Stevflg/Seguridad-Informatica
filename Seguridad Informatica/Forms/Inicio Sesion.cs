@@ -32,8 +32,9 @@ namespace Seguridad_Informatica.Forms
                 var result = await InicioSesion.Login(usuario);
                 if (result)
                 {
+                    var user =await InicioSesion.GetUsuario(usuario);
                     this.Invoke(new Action(() => {
-                        Main formMain = new Main();
+                        Main formMain = new Main(user);
                         this.Hide();
                         formMain.ShowDialog();
                         this.Close();

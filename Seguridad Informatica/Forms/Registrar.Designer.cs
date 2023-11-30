@@ -140,11 +140,11 @@
             LabelHead.BackColor = Color.Transparent;
             LabelHead.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LabelHead.ForeColor = SystemColors.ControlDarkDark;
-            LabelHead.Location = new Point(178, 19);
+            LabelHead.Location = new Point(173, 22);
             LabelHead.Name = "LabelHead";
-            LabelHead.Size = new Size(141, 23);
+            LabelHead.Size = new Size(132, 23);
             LabelHead.TabIndex = 4;
-            LabelHead.Text = "Registrar Usuario";
+            LabelHead.Text = "Agregar Usuario";
             // 
             // LabelNombre
             // 

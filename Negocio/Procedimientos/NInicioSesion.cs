@@ -46,6 +46,21 @@ namespace Negocio.Procedimientos
                 return false;
             }
         }
+        public async Task<Usuario> GetUsuario(Usuario user)
+        {
+            try
+            {
+                var usuario =await (from u in context.Usuarios
+                                    where u.Correo.Equals(user.Correo) && u.Activo.Equals(true)
+                                    select u).FirstOrDefaultAsync();
+                var result = (usuario != null) ? usuario : null;
+                return result;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+        }
 
     }
 }

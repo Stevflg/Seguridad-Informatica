@@ -65,6 +65,8 @@ namespace Negocio.Procedimientos
                 if (usuario != null)
                 {
                     usuario.Activo = false;
+                    usuario.UsuarioActualiza = user.UsuarioActualiza;
+                    usuario.FechaActualizacion = user.FechaActualizacion;
                     context.Entry(usuario).State = EntityState.Modified;
                     var query =await context.SaveChangesAsync();
                     var result = (query > 0) ? "Eliminado Correctamente" : "No se pudo Eliminar";
