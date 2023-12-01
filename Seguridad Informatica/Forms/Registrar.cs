@@ -59,8 +59,8 @@ namespace Seguridad_Informatica
 
         private async void Create()
         {
-            if (!string.IsNullOrEmpty(TextBoxNombre.Text) || (!string.IsNullOrEmpty(TextBoxCorreo.Text)) ||
-                !string.IsNullOrEmpty(TextBoxUsername.Text) || !string.IsNullOrEmpty(TextBoxContraseña.Text))
+            if (!string.IsNullOrEmpty(TextBoxNombre.Text) && (!string.IsNullOrEmpty(TextBoxCorreo.Text)) &&
+                !string.IsNullOrEmpty(TextBoxUsername.Text) && !string.IsNullOrEmpty(TextBoxContraseña.Text))
             {
                 if (!ContraseñaSegura(TextBoxContraseña.Text))
                 {

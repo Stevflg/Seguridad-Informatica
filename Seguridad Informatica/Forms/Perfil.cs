@@ -1,4 +1,5 @@
 ﻿using Dominio.Entidades;
+using Negocio.Procedimientos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,26 +14,30 @@ namespace Seguridad_Informatica.Forms
 {
     public partial class Perfil : Form
     {
-        private readonly Usuario user;
-        public Perfil(Usuario user)
+        public Perfil(short id)
         {
             InitializeComponent();
-            this.user = user;
+            this.id = id;
         }
-
+        private short id;
         private void ButtonUser_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void Perfil_Load(object sender, EventArgs e)
+        private async void Perfil_Load(object sender, EventArgs e)
         {
-            label_Nombre.Text = user.Nombre;
-            label_Correo.Text = user.Correo;
-            label_Usuario.Text = user.Login;
-            var estado = (user.Activo.Equals(true)) ? "Activo" : "Inactivo";
-            label_estado.Text = estado;
-            label_Fecha.Text = user.FechaRegistro.ToString("dd/MM/yyyy");
+            NUsuarios us = new NUsuarios();
+            var user = await us.GetUsarioId(new Usuario { Id = id });
+            this.Invoke(new Action(() =>
+            {
+                label_Nombre.Text = user.Nombre;
+                label_Correo.Text = user.Correo;
+                label_Usuario.Text = user.Login;
+                var estado = (user.Activo.Equals(true)) ? "Activo" : "Inactivo";
+                label_estado.Text = estado;
+                label_Fecha.Text = user.FechaRegistro.ToString("dd/MM/yyyy");
+            }));
         }
     }
 }

@@ -44,7 +44,6 @@ namespace Negocio.Procedimientos
                     usuario.Password = user.Password ;
                     usuario.UsuarioActualiza = user.UsuarioActualiza ;
                     usuario.FechaActualizacion = DateTime.Now;
-
                     context.Entry(usuario).State = EntityState.Modified;
                     var query = await context.SaveChangesAsync();
                     var result = (query > 0) ? "Guardado Correctamente" : "No se pudo Guardar";
@@ -119,6 +118,19 @@ namespace Negocio.Procedimientos
                                       FechaRegistro = u.FechaRegistro,
                                   }).ToListAsync();
                 return list;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<Usuario> GetUsarioId(Usuario user)
+        {
+            try
+            {
+                var usuario = await context.Usuarios.FindAsync(user.Id);
+                return usuario;
             }
             catch
             {

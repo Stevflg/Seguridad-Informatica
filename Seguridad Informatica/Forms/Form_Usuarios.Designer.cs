@@ -187,7 +187,8 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             DataGridUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            DataGridUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridUsuarios.ColumnHeadersHeight = 4;
+            DataGridUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -215,7 +216,7 @@
             DataGridUsuarios.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Sunken;
             DataGridUsuarios.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             DataGridUsuarios.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DataGridUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             DataGridUsuarios.ThemeStyle.HeaderStyle.Height = 4;
             DataGridUsuarios.ThemeStyle.ReadOnly = true;
             DataGridUsuarios.ThemeStyle.RowsStyle.BackColor = Color.White;
@@ -268,6 +269,7 @@
             ButtonEditar.TabIndex = 20;
             ButtonEditar.Text = "Editar";
             ButtonEditar.TextAlign = HorizontalAlignment.Left;
+            ButtonEditar.Click += ButtonEditar_Click;
             // 
             // ButtonEliminar
             // 

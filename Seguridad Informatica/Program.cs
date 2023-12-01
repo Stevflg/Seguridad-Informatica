@@ -1,4 +1,5 @@
 using Datos.Context;
+using Negocio.Inicial;
 using Seguridad_Informatica.Forms;
 
 namespace Seguridad_Informatica
@@ -16,6 +17,8 @@ namespace Seguridad_Informatica
             ApplicationConfiguration.Initialize();
             var context = new SeguridadInformaticaContext();
             context.Database.EnsureCreated();
+            var ld = new LoadData();
+            ld.InsertData();
             if(context.Usuarios.FirstOrDefault() == null) { Registrar fr = new Registrar(); fr.ShowDialog(); }
             Application.Run(new Inicio_Sesion());
         }

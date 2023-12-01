@@ -33,7 +33,7 @@ namespace Seguridad_Informatica
         }
         private void ButtonUser_Click(object sender, EventArgs e)
         {
-            Perfil per = new Perfil(user);
+            Perfil per = new Perfil(user.Id);
             per.ShowDialog();
         }
 
@@ -45,6 +45,16 @@ namespace Seguridad_Informatica
         private void ButtonUsuarios_Click(object sender, EventArgs e)
         {
             Open_form_panel(new Form_Usuarios(user));
+        }
+
+        private void ButtonInicio_Click(object sender, EventArgs e)
+        {
+            Open_form_panel(new Inicio());
+        }
+
+        private void ButtonConfiguracion_Click(object sender, EventArgs e)
+        {
+            Open_form_panel(new Configuracion());
         }
     }
 }

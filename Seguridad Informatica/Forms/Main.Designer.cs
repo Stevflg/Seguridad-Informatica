@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             PanelOptions = new Guna.UI2.WinForms.Guna2Panel();
+            ButtonPermisos = new Guna.UI2.WinForms.Guna2Button();
+            ButtonUsuarios = new Guna.UI2.WinForms.Guna2Button();
             ButtonConfiguracion = new Guna.UI2.WinForms.Guna2Button();
             ButtonInicio = new Guna.UI2.WinForms.Guna2Button();
             PanelHead = new Guna.UI2.WinForms.Guna2Panel();
@@ -52,7 +56,6 @@
             labelUser = new Label();
             ButtonUser = new Guna.UI2.WinForms.Guna2Button();
             panelcontainer = new Panel();
-            ButtonUsuarios = new Guna.UI2.WinForms.Guna2Button();
             PanelOptions.SuspendLayout();
             PanelHead.SuspendLayout();
             SuspendLayout();
@@ -60,21 +63,63 @@
             // PanelOptions
             // 
             PanelOptions.BackColor = Color.LightGray;
+            PanelOptions.Controls.Add(ButtonPermisos);
             PanelOptions.Controls.Add(ButtonUsuarios);
             PanelOptions.Controls.Add(ButtonConfiguracion);
             PanelOptions.Controls.Add(ButtonInicio);
-            PanelOptions.CustomizableEdges = customizableEdges7;
+            PanelOptions.CustomizableEdges = customizableEdges9;
             PanelOptions.Dock = DockStyle.Left;
             PanelOptions.Location = new Point(0, 57);
             PanelOptions.Name = "PanelOptions";
-            PanelOptions.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            PanelOptions.ShadowDecoration.CustomizableEdges = customizableEdges10;
             PanelOptions.Size = new Size(165, 349);
             PanelOptions.TabIndex = 0;
+            // 
+            // ButtonPermisos
+            // 
+            ButtonPermisos.BorderRadius = 6;
+            ButtonPermisos.CustomizableEdges = customizableEdges1;
+            ButtonPermisos.DisabledState.BorderColor = Color.DarkGray;
+            ButtonPermisos.DisabledState.CustomBorderColor = Color.DarkGray;
+            ButtonPermisos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ButtonPermisos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ButtonPermisos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ButtonPermisos.ForeColor = Color.White;
+            ButtonPermisos.Image = (Image)resources.GetObject("ButtonPermisos.Image");
+            ButtonPermisos.ImageAlign = HorizontalAlignment.Left;
+            ButtonPermisos.Location = new Point(12, 133);
+            ButtonPermisos.Name = "ButtonPermisos";
+            ButtonPermisos.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            ButtonPermisos.Size = new Size(140, 34);
+            ButtonPermisos.TabIndex = 21;
+            ButtonPermisos.Text = "Permisos";
+            ButtonPermisos.TextAlign = HorizontalAlignment.Left;
+            // 
+            // ButtonUsuarios
+            // 
+            ButtonUsuarios.BorderRadius = 6;
+            ButtonUsuarios.CustomizableEdges = customizableEdges3;
+            ButtonUsuarios.DisabledState.BorderColor = Color.DarkGray;
+            ButtonUsuarios.DisabledState.CustomBorderColor = Color.DarkGray;
+            ButtonUsuarios.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ButtonUsuarios.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ButtonUsuarios.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ButtonUsuarios.ForeColor = Color.White;
+            ButtonUsuarios.Image = (Image)resources.GetObject("ButtonUsuarios.Image");
+            ButtonUsuarios.ImageAlign = HorizontalAlignment.Left;
+            ButtonUsuarios.Location = new Point(14, 93);
+            ButtonUsuarios.Name = "ButtonUsuarios";
+            ButtonUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ButtonUsuarios.Size = new Size(140, 34);
+            ButtonUsuarios.TabIndex = 20;
+            ButtonUsuarios.Text = "Usuarios";
+            ButtonUsuarios.TextAlign = HorizontalAlignment.Left;
+            ButtonUsuarios.Click += ButtonUsuarios_Click;
             // 
             // ButtonConfiguracion
             // 
             ButtonConfiguracion.BorderRadius = 6;
-            ButtonConfiguracion.CustomizableEdges = customizableEdges3;
+            ButtonConfiguracion.CustomizableEdges = customizableEdges5;
             ButtonConfiguracion.DisabledState.BorderColor = Color.DarkGray;
             ButtonConfiguracion.DisabledState.CustomBorderColor = Color.DarkGray;
             ButtonConfiguracion.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -85,16 +130,17 @@
             ButtonConfiguracion.ImageAlign = HorizontalAlignment.Left;
             ButtonConfiguracion.Location = new Point(14, 53);
             ButtonConfiguracion.Name = "ButtonConfiguracion";
-            ButtonConfiguracion.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ButtonConfiguracion.ShadowDecoration.CustomizableEdges = customizableEdges6;
             ButtonConfiguracion.Size = new Size(140, 34);
             ButtonConfiguracion.TabIndex = 19;
             ButtonConfiguracion.Text = "Configuracion";
             ButtonConfiguracion.TextAlign = HorizontalAlignment.Left;
+            ButtonConfiguracion.Click += ButtonConfiguracion_Click;
             // 
             // ButtonInicio
             // 
             ButtonInicio.BorderRadius = 6;
-            ButtonInicio.CustomizableEdges = customizableEdges5;
+            ButtonInicio.CustomizableEdges = customizableEdges7;
             ButtonInicio.DisabledState.BorderColor = Color.DarkGray;
             ButtonInicio.DisabledState.CustomBorderColor = Color.DarkGray;
             ButtonInicio.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -105,11 +151,12 @@
             ButtonInicio.ImageAlign = HorizontalAlignment.Left;
             ButtonInicio.Location = new Point(14, 13);
             ButtonInicio.Name = "ButtonInicio";
-            ButtonInicio.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            ButtonInicio.ShadowDecoration.CustomizableEdges = customizableEdges8;
             ButtonInicio.Size = new Size(140, 34);
             ButtonInicio.TabIndex = 18;
             ButtonInicio.Text = "Inicio";
             ButtonInicio.TextAlign = HorizontalAlignment.Left;
+            ButtonInicio.Click += ButtonInicio_Click;
             // 
             // PanelHead
             // 
@@ -118,11 +165,11 @@
             PanelHead.Controls.Add(ButtonCerrarSesion);
             PanelHead.Controls.Add(labelUser);
             PanelHead.Controls.Add(ButtonUser);
-            PanelHead.CustomizableEdges = customizableEdges13;
+            PanelHead.CustomizableEdges = customizableEdges15;
             PanelHead.Dock = DockStyle.Top;
             PanelHead.Location = new Point(0, 0);
             PanelHead.Name = "PanelHead";
-            PanelHead.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            PanelHead.ShadowDecoration.CustomizableEdges = customizableEdges16;
             PanelHead.Size = new Size(774, 57);
             PanelHead.TabIndex = 1;
             // 
@@ -141,7 +188,7 @@
             ButtonCerrarSesion.Animated = true;
             ButtonCerrarSesion.AnimatedGIF = true;
             ButtonCerrarSesion.BorderRadius = 6;
-            ButtonCerrarSesion.CustomizableEdges = customizableEdges9;
+            ButtonCerrarSesion.CustomizableEdges = customizableEdges11;
             ButtonCerrarSesion.DisabledState.BorderColor = Color.DarkGray;
             ButtonCerrarSesion.DisabledState.CustomBorderColor = Color.DarkGray;
             ButtonCerrarSesion.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -150,7 +197,7 @@
             ButtonCerrarSesion.ForeColor = Color.White;
             ButtonCerrarSesion.Location = new Point(655, 12);
             ButtonCerrarSesion.Name = "ButtonCerrarSesion";
-            ButtonCerrarSesion.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            ButtonCerrarSesion.ShadowDecoration.CustomizableEdges = customizableEdges12;
             ButtonCerrarSesion.Size = new Size(107, 28);
             ButtonCerrarSesion.TabIndex = 20;
             ButtonCerrarSesion.Text = "Cerrar  Sesion";
@@ -169,7 +216,7 @@
             // ButtonUser
             // 
             ButtonUser.BorderRadius = 20;
-            ButtonUser.CustomizableEdges = customizableEdges11;
+            ButtonUser.CustomizableEdges = customizableEdges13;
             ButtonUser.DisabledState.BorderColor = Color.DarkGray;
             ButtonUser.DisabledState.CustomBorderColor = Color.DarkGray;
             ButtonUser.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -179,8 +226,8 @@
             ButtonUser.Image = (Image)resources.GetObject("ButtonUser.Image");
             ButtonUser.Location = new Point(13, 9);
             ButtonUser.Name = "ButtonUser";
-            ButtonUser.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            ButtonUser.Size = new Size(41, 37);
+            ButtonUser.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            ButtonUser.Size = new Size(41, 42);
             ButtonUser.TabIndex = 19;
             ButtonUser.Click += ButtonUser_Click;
             // 
@@ -191,27 +238,6 @@
             panelcontainer.Name = "panelcontainer";
             panelcontainer.Size = new Size(609, 349);
             panelcontainer.TabIndex = 2;
-            // 
-            // ButtonUsuarios
-            // 
-            ButtonUsuarios.BorderRadius = 6;
-            ButtonUsuarios.CustomizableEdges = customizableEdges1;
-            ButtonUsuarios.DisabledState.BorderColor = Color.DarkGray;
-            ButtonUsuarios.DisabledState.CustomBorderColor = Color.DarkGray;
-            ButtonUsuarios.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            ButtonUsuarios.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            ButtonUsuarios.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ButtonUsuarios.ForeColor = Color.White;
-            ButtonUsuarios.Image = (Image)resources.GetObject("ButtonUsuarios.Image");
-            ButtonUsuarios.ImageAlign = HorizontalAlignment.Left;
-            ButtonUsuarios.Location = new Point(14, 93);
-            ButtonUsuarios.Name = "ButtonUsuarios";
-            ButtonUsuarios.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            ButtonUsuarios.Size = new Size(140, 34);
-            ButtonUsuarios.TabIndex = 20;
-            ButtonUsuarios.Text = "Usuarios";
-            ButtonUsuarios.TextAlign = HorizontalAlignment.Left;
-            ButtonUsuarios.Click += ButtonUsuarios_Click;
             // 
             // Main
             // 
@@ -244,5 +270,6 @@
         private Panel panelcontainer;
         private Guna.UI2.WinForms.Guna2Button ButtonConfiguracion;
         private Guna.UI2.WinForms.Guna2Button ButtonUsuarios;
+        private Guna.UI2.WinForms.Guna2Button ButtonPermisos;
     }
 }

@@ -86,7 +86,13 @@ namespace Seguridad_Informatica.Forms
                     ButtonEliminar.Enabled = true;
                 }
             }
-            catch { }
+            catch
+            {
+                ClearTextBoxes();
+                MessageBox.Show("Elija una fila válida.");
+                ButtonEditar.Enabled = false;
+                ButtonEliminar.Enabled = false;
+            }
         }
 
         private void ButtonAgregar_Click(object sender, EventArgs e)
@@ -101,6 +107,13 @@ namespace Seguridad_Informatica.Forms
             this.Invoke(new Action(() => { ButtonEliminar.Enabled = false; }));
             await Task.Run(() => { Eliminar(); });
             this.Invoke(new Action(() => { ButtonEliminar.Enabled = true; }));
+        }
+
+        private void ButtonEditar_Click(object sender, EventArgs e)
+        {
+            Editar_Usuario FormEditar = new Editar_Usuario(InicioSesion, UserId);
+            FormEditar.ShowDialog();
+            CargarDatos();
         }
     }
 }
