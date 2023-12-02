@@ -1,5 +1,6 @@
 ﻿using Dominio.DTO;
 using Dominio.Entidades;
+using Microsoft.VisualBasic.ApplicationServices;
 using Negocio.Procedimientos;
 using System;
 using System.Collections.Generic;
@@ -179,6 +180,31 @@ namespace Seguridad_Informatica.Forms
                 ButtonAgregar.Enabled = true;
                 ButtonEliminar.Enabled = true;
             }));
+        }
+
+        private void DataGridViewPermiso_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                try
+                {
+                    if (DataGridViewPermiso.Rows[e.RowIndex].Cells[0].Value.ToString() == string.Empty)
+                    {
+                        MessageBox.Show("Elija una fila válida.");
+                        ButtonEliminar.Enabled = false;
+                    }
+                    else
+                    {
+                        PermisoId = short.Parse(DataGridViewPermiso.Rows[e.RowIndex].Cells[0].Value.ToString());
+                        ButtonEliminar.Enabled = true;
+                    }
+                }
+                catch
+                {
+                    ButtonEliminar.Enabled = false;
+                }
+            }
+            catch { }
         }
     }
 }

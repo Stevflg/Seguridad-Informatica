@@ -79,7 +79,7 @@
             ComboBoxUsuario.Location = new Point(73, 93);
             ComboBoxUsuario.Name = "ComboBoxUsuario";
             ComboBoxUsuario.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            ComboBoxUsuario.Size = new Size(166, 36);
+            ComboBoxUsuario.Size = new Size(192, 36);
             ComboBoxUsuario.TabIndex = 17;
             ComboBoxUsuario.SelectedIndexChanged += ComboBoxUsuario_SelectedIndexChanged;
             // 
@@ -179,6 +179,7 @@
             DataGridViewPermiso.ThemeStyle.RowsStyle.Height = 25;
             DataGridViewPermiso.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             DataGridViewPermiso.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            DataGridViewPermiso.CellClick += DataGridViewPermiso_CellClick;
             // 
             // ButtonEliminar
             // 

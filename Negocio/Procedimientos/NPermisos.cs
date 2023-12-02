@@ -29,6 +29,7 @@ namespace Negocio.Procedimientos
                                   join u in context.Usuarios on ur.IdUsuario equals u.Id
                                   join pr in context.RolPermisos on r.Id equals pr.IdRol
                                   join p in context.Permisos on pr.IdPermiso equals p.Id
+                                  where ur.Activo.Equals(true)
                                   select new PermisosDTO { 
                                     Id  = ur.Id,
                                     Nombre = u.Nombre,
