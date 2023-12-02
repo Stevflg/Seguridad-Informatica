@@ -24,6 +24,7 @@ namespace Seguridad_Informatica
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             Nusuario = new NUsuarios();
+            usuario = new Usuario {Id=1 };
         }
         private Usuario usuario;
         public Registrar(Usuario user)
@@ -73,7 +74,6 @@ namespace Seguridad_Informatica
                 }
                 else
                 {
-                    var usuarioregistro =(usuario.Id >0) ? usuario.Id:1;
                     Usuario u = new Usuario
                     {
                         Nombre = TextBoxNombre.Text,
@@ -84,7 +84,7 @@ namespace Seguridad_Informatica
                         Bloqueado = false,
                         Activo = true,
                         FechaRegistro = DateTime.Now,
-                        UsuarioRegistro = usuarioregistro
+                        UsuarioRegistro = usuario.Id
                     };
                     var result = await Nusuario.Create(u);
                     this.Invoke(new Action(() =>

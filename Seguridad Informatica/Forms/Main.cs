@@ -56,5 +56,10 @@ namespace Seguridad_Informatica
         {
             Open_form_panel(new Configuracion());
         }
+
+        private void ButtonPermisos_Click(object sender, EventArgs e)
+        {
+            Open_form_panel(new Form_Permisos(user));
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace Seguridad_Informatica
             context.Database.EnsureCreated();
             var ld = new LoadData();
             ld.InsertData();
-            if(context.Usuarios.FirstOrDefault() == null) { Registrar fr = new Registrar(); fr.ShowDialog(); }
+            if(!context.Usuarios.Any()) { Registrar fr = new Registrar(); fr.ShowDialog(); }
             Application.Run(new Inicio_Sesion());
         }
     }

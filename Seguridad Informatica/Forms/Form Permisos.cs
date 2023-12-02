@@ -27,9 +27,9 @@ namespace Seguridad_Informatica.Forms
 
         private async void Form_Permisos_Load(object sender, EventArgs e)
         {
-            CargarUsuarios();
-            CargarRoles();
-            CargarDatos();
+            await Task.Run(() => { CargarUsuarios(); });
+            await Task.Run(() => { CargarRoles(); });
+            await Task.Run(() => { CargarDatos(); });
         }
 
         private async void CargarDatos()
@@ -60,7 +60,7 @@ namespace Seguridad_Informatica.Forms
                     }
                     ComboBoxUsuario.AutoCompleteCustomSource = lst;
                     ComboBoxUsuario.AutoCompleteMode = AutoCompleteMode.Suggest;
-                    ComboBoxUsuario.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    ComboBoxUsuario.AutoCompleteSource = AutoCompleteSource.ListItems;
 
                 }));
             }
@@ -79,7 +79,7 @@ namespace Seguridad_Informatica.Forms
                 {
                     ComboBoxRol.DataSource = ListRol;
                     ComboBoxRol.ValueMember = "Id";
-                    ComboBoxRol.DisplayMember = "Nombre";
+                    ComboBoxRol.DisplayMember = "Rol";
 
                     AutoCompleteStringCollection lst = new AutoCompleteStringCollection();
                     for (int i = 0; i < ListRol.Count; i++)
@@ -88,7 +88,7 @@ namespace Seguridad_Informatica.Forms
                     }
                     ComboBoxRol.AutoCompleteCustomSource = lst;
                     ComboBoxRol.AutoCompleteMode = AutoCompleteMode.Suggest;
-                    ComboBoxRol.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    ComboBoxRol.AutoCompleteSource = AutoCompleteSource.ListItems;
 
                 }));
             }
@@ -132,7 +132,7 @@ namespace Seguridad_Informatica.Forms
 
             this.Invoke(new Action(() =>
             {
-                MessageBox.Show(result, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(result, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarDatos();
             }));
         }

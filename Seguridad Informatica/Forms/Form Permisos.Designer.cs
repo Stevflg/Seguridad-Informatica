@@ -64,6 +64,7 @@
             // 
             // ComboBoxUsuario
             // 
+            ComboBoxUsuario.AutoCompleteSource = AutoCompleteSource.ListItems;
             ComboBoxUsuario.BackColor = Color.Transparent;
             ComboBoxUsuario.BorderColor = Color.FromArgb(192, 0, 0);
             ComboBoxUsuario.BorderRadius = 5;
@@ -98,7 +99,7 @@
             LabelRol.BackColor = Color.Transparent;
             LabelRol.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             LabelRol.ForeColor = SystemColors.ControlDarkDark;
-            LabelRol.Location = new Point(256, 69);
+            LabelRol.Location = new Point(274, 69);
             LabelRol.Name = "LabelRol";
             LabelRol.Size = new Size(25, 22);
             LabelRol.TabIndex = 19;
@@ -106,6 +107,7 @@
             // 
             // ComboBoxRol
             // 
+            ComboBoxRol.AutoCompleteSource = AutoCompleteSource.ListItems;
             ComboBoxRol.BackColor = Color.Transparent;
             ComboBoxRol.BorderColor = Color.FromArgb(192, 0, 0);
             ComboBoxRol.BorderRadius = 5;
@@ -117,10 +119,10 @@
             ComboBoxRol.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             ComboBoxRol.ForeColor = Color.FromArgb(68, 88, 112);
             ComboBoxRol.ItemHeight = 30;
-            ComboBoxRol.Location = new Point(256, 93);
+            ComboBoxRol.Location = new Point(271, 93);
             ComboBoxRol.Name = "ComboBoxRol";
             ComboBoxRol.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            ComboBoxRol.Size = new Size(166, 36);
+            ComboBoxRol.Size = new Size(151, 36);
             ComboBoxRol.TabIndex = 20;
             ComboBoxRol.SelectedIndexChanged += ComboBoxRol_SelectedIndexChanged;
             // 

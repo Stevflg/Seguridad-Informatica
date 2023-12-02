@@ -94,6 +94,7 @@
             ButtonPermisos.TabIndex = 21;
             ButtonPermisos.Text = "Permisos";
             ButtonPermisos.TextAlign = HorizontalAlignment.Left;
+            ButtonPermisos.Click += ButtonPermisos_Click;
             // 
             // ButtonUsuarios
             // 

@@ -85,6 +85,8 @@ namespace Negocio.Inicial
                 UsuarioRegistro = 1,
                 FechaRegistro = DateTime.Now
             });
+            context.AddRange(lpermiso);
+            context.SaveChanges();
         }
 
         private void RolPermiso_()
