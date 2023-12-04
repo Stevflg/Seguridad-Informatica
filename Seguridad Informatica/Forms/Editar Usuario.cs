@@ -17,14 +17,12 @@ namespace Seguridad_Informatica.Forms
     public partial class Editar_Usuario : Form
     {
         private Usuario InicioSesion;
-        private NUsuarios Nuser;
         private short Userid;
         public Editar_Usuario(Usuario InicioSesion, short Userid)
         {
             InitializeComponent();
             this.InicioSesion = InicioSesion;
             this.Userid = Userid;
-            this.Nuser = new NUsuarios();
         }
 
         private bool ContraseñaSegura(string Contraseña)
@@ -40,7 +38,7 @@ namespace Seguridad_Informatica.Forms
         private Usuario UsuarioEditar;
         private async void LoadUser()
         {
-            var result = await Nuser.GetUsarioId(new Usuario { Id = Userid });
+            var result = await NUsuarios.GetUsarioId(new Usuario { Id = Userid });
             this.Invoke(new Action(() =>
             {
                 TextBoxNombre.Text = result.Nombre;
@@ -71,7 +69,7 @@ namespace Seguridad_Informatica.Forms
                     FechaActualizacion = DateTime.Now,
                     UsuarioActualiza = usuarioregistro
                 };
-                var result = await Nuser.Update(u);
+                var result = await NUsuarios.Update(u);
                 this.Invoke(new Action(() =>
                 {
                     MessageBox.Show(result, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

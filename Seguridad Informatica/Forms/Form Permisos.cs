@@ -16,12 +16,10 @@ namespace Seguridad_Informatica.Forms
 {
     public partial class Form_Permisos : Form
     {
-        private readonly NPermisos permisos;
         private Usuario User;
         public Form_Permisos(Usuario User)
         {
             InitializeComponent();
-            this.permisos = new NPermisos();
             this.User = User;
         }
 
@@ -36,7 +34,7 @@ namespace Seguridad_Informatica.Forms
         private async void CargarDatos()
         {
             var id = (IdUsuario > 0) ? IdUsuario : 1;
-            var data = await permisos.GetPermisos(new Usuario { Id = IdUsuario });
+            var data = await NPermisos.GetPermisos(new Usuario { Id = IdUsuario });
             this.Invoke(new Action(() =>
             {
                 DataGridViewPermiso.DataSource = data;
@@ -47,7 +45,7 @@ namespace Seguridad_Informatica.Forms
             try
             {
 
-                var ListUsuario = await permisos.UsuariosList();
+                var ListUsuario = await NPermisos.UsuariosList();
                 this.Invoke(new Action(() =>
                 {
                     ComboBoxUsuario.DataSource = ListUsuario;
@@ -75,7 +73,7 @@ namespace Seguridad_Informatica.Forms
             try
             {
 
-                var ListRol = await permisos.RolesList();
+                var ListRol = await NPermisos.RolesList();
                 this.Invoke(new Action(() =>
                 {
                     ComboBoxRol.DataSource = ListRol;
@@ -122,7 +120,7 @@ namespace Seguridad_Informatica.Forms
 
         private async void AgregarPermiso()
         {
-            var result = await permisos.AgregarPermiso(new RolUsuario
+            var result = await NPermisos.AgregarPermiso(new RolUsuario
             {
                 IdRol = IdRol,
                 IdUsuario = IdUsuario,
@@ -141,7 +139,7 @@ namespace Seguridad_Informatica.Forms
         private short PermisoId;
         private async void RevocarPermiso()
         {
-            var result = await permisos.Eliminar(new PermisosDTO
+            var result = await NPermisos.Eliminar(new PermisosDTO
             {
                 Id = PermisoId,
             }, new Usuario { Id = User.Id, FechaActualizacion = DateTime.Now });

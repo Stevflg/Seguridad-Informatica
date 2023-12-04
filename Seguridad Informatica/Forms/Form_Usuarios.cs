@@ -14,30 +14,29 @@ namespace Seguridad_Informatica.Forms
 {
     public partial class Form_Usuarios : Form
     {
-        private readonly NUsuarios Nusers;
         private Usuario usuario;
         private Usuario InicioSesion;
         public Form_Usuarios(Usuario InicioSesion)
         {
             InitializeComponent();
-            Nusers = new NUsuarios();
             this.InicioSesion = InicioSesion;
         }
-
 
         private async void Form_Usuarios_Load(object sender, EventArgs e)
         {
             CargarDatos();
         }
+
         #region Metodos
         private async void CargarDatos()
         {
-            var listausuarios = await Nusers.GetListUsuarios();
+            var listausuarios = await NUsuarios.GetListUsuarios();
             this.Invoke(new Action(() =>
             {
                 DataGridUsuarios.DataSource = listausuarios;
             }));
         }
+
         private short UserId = 0;
         private async void Eliminar()
         {
@@ -49,7 +48,7 @@ namespace Seguridad_Informatica.Forms
                     UsuarioActualiza = InicioSesion.Id,
                     FechaActualizacion = DateTime.Now
                 };
-                var resultado = await Nusers.Delete(usuario);
+                var resultado = await NUsuarios.Delete(usuario);
                 this.Invoke(new Action(() =>
                 {
                     MessageBox.Show(resultado, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -57,6 +56,7 @@ namespace Seguridad_Informatica.Forms
                 }));
             }
         }
+
         private void ClearTextBoxes()
         {
             TextBoxNombre.Clear();

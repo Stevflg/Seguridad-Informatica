@@ -1,4 +1,5 @@
 ﻿using Datos.Context;
+using Datos.Proc;
 using Dominio.Entidades;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -11,55 +12,16 @@ using System.Threading.Tasks;
 
 namespace Negocio.Procedimientos
 {
-    public class NInicioSesion
+    public static class NInicioSesion
     {
-        private readonly SeguridadInformaticaContext context;
-        public NInicioSesion() { context = new SeguridadInformaticaContext(); }
-
-        public async Task<bool> Login(Usuario user)
+        public static async Task<bool> Login(Usuario user)
         {
-            try
-            {
-                var usuario = await (from u in context.Usuarios
-                                     where u.Correo.Equals(user.Correo)
-                                     && u.Activo.Equals(true) && u.Bloqueado.Equals(false)
-                                     select u).FirstAsync();
-                if (usuario != null)
-                {
-                    if (Encrypt.EncryptUser(user.Correo).SequenceEqual(Encrypt.EncryptUser(user.Correo)))
-                    {
-                        var result = (usuario.Password.SequenceEqual(user.Password)) ? true : false;
-                        if (!result)
-                        { 
-                            usuario.Contador += 1;
-                            usuario.Bloqueado = (usuario.Contador>2) ? true : false;
-                            context.Entry(usuario).State = EntityState.Modified;
-                            await context.SaveChangesAsync();
-                            return result;
-                        }
-                        return result;
-                    }
-                }
-                return false;
-            }catch (Exception ex)
-            {
-                return false;
-            }
+           return await DInicioSesion.Login(user);
         }
-        public async Task<Usuario> GetUsuario(Usuario user)
+
+        public static async Task<Usuario> GetUsuario(Usuario user)
         {
-            try
-            {
-                var usuario =await (from u in context.Usuarios
-                                    where u.Correo.Equals(user.Correo) && u.Activo.Equals(true)
-                                    select u).FirstOrDefaultAsync();
-                var result = (usuario != null) ? usuario : null;
-                return result;
-            }
-            catch(Exception ex)
-            {
-                return null;
-            }
+           return await DInicioSesion.GetUsuario(user);
         }
 
     }

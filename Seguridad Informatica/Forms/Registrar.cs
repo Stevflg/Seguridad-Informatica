@@ -17,20 +17,17 @@ namespace Seguridad_Informatica
 {
     public partial class Registrar : Form
     {
-        private readonly NUsuarios Nusuario;
         private int initial = 0;
         public Registrar()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            Nusuario = new NUsuarios();
             usuario = new Usuario {Id=1 };
         }
         private Usuario usuario;
         public Registrar(Usuario user)
         {
-            InitializeComponent();
-            Nusuario = new NUsuarios();     
+            InitializeComponent();   
             usuario = user;
         }
         # region Validacion de contraseña segura
@@ -86,7 +83,7 @@ namespace Seguridad_Informatica
                         FechaRegistro = DateTime.Now,
                         UsuarioRegistro = usuario.Id
                     };
-                    var result = await Nusuario.Create(u);
+                    var result = await NUsuarios.Create(u);
                     this.Invoke(new Action(() =>
                     {
                         MessageBox.Show(result, "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);

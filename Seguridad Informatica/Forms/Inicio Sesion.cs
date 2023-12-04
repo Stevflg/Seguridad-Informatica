@@ -14,11 +14,9 @@ namespace Seguridad_Informatica.Forms
 {
     public partial class Inicio_Sesion : Form
     {
-        private readonly NInicioSesion InicioSesion;
         public Inicio_Sesion()
         {
             InitializeComponent();
-            this.InicioSesion = new NInicioSesion();
         }
         public async void Login()
         {
@@ -29,10 +27,10 @@ namespace Seguridad_Informatica.Forms
                     Correo = TextBoxCorreo.Text,
                     Password = Encrypt.EncryptPass(TextBoxContraseña.Text)
                 };
-                var result = await InicioSesion.Login(usuario);
+                var result = await NInicioSesion.Login(usuario);
                 if (result)
                 {
-                    var user =await InicioSesion.GetUsuario(usuario);
+                    var user =await NInicioSesion.GetUsuario(usuario);
                     this.Invoke(new Action(() => {
                         Main formMain = new Main(user);
                         this.Hide();

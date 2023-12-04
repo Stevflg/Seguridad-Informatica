@@ -27,8 +27,7 @@ namespace Seguridad_Informatica.Forms
 
         private async void Perfil_Load(object sender, EventArgs e)
         {
-            NUsuarios us = new NUsuarios();
-            var user = await us.GetUsarioId(new Usuario { Id = id });
+            var user = await NUsuarios.GetUsarioId(new Usuario { Id = id });
             this.Invoke(new Action(() =>
             {
                 label_Nombre.Text = user.Nombre;
