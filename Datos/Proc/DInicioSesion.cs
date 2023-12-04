@@ -17,7 +17,6 @@ namespace Datos.Proc
         {
             try
             {
-
                 using (var context = new SeguridadInformaticaContext())
                 {
                     var usuario = await (from u in context.Usuarios
@@ -38,6 +37,14 @@ namespace Datos.Proc
                                 return result;
                             }
                             return result;
+                        }
+                        else
+                        {
+                            usuario.Contador += 1;
+                            usuario.Bloqueado = (usuario.Contador > 2) ? true : false;
+                            context.Entry(usuario).State = EntityState.Modified;
+                            await context.SaveChangesAsync();
+                            return false;
                         }
                     }
                     return false;
