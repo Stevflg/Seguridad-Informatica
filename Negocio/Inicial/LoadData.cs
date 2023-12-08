@@ -107,49 +107,8 @@ namespace Negocio.Inicial
                 UsuarioRegistro = 1,
                 FechaRegistro = DateTime.Now
             });
-            rolPermisos.Add(new RolPermiso
-            {
-                IdRol = 2,
-                IdPermiso = 1,
-                Activo = true,
-                UsuarioRegistro = 1,
-                FechaRegistro = DateTime.Now
-            });
-            rolPermisos.Add(new RolPermiso
-            {
-                IdRol = 3,
-                IdPermiso = 2,
-                Activo = true,
-                UsuarioRegistro = 1,
-                FechaRegistro = DateTime.Now
-            });
-            rolPermisos.Add(new RolPermiso
-            {
-                IdRol = 4,
-                IdPermiso = 1,
-                Activo = true,
-                UsuarioRegistro = 1,
-                FechaRegistro = DateTime.Now
-            });
-            rolPermisos.Add(new RolPermiso
-            {
-                IdRol = 5,
-                IdPermiso = 1,
-                Activo = true,
-                UsuarioRegistro = 1,
-                FechaRegistro = DateTime.Now
-            });
-            rolPermisos.Add(new RolPermiso
-            {
-                IdRol = 5,
-                IdPermiso = 2,
-                Activo = true,
-                UsuarioRegistro = 1,
-                FechaRegistro = DateTime.Now
-            });
             context.AddRange(rolPermisos);
             context.SaveChanges();
-        
         }
     }
 }

@@ -20,13 +20,31 @@ namespace Datos.Proc
             {
                using(var context =new SeguridadInformaticaContext())
                 {
-                    context.Add(user);
-                    var query = await context.SaveChangesAsync();
-                    var result = (query > 0) ? "Guardado Correctamente" : "No se pudo Guardar";
-                    return result;
+                    var username = context.Usuarios.Find(user.Correo);
+                    if(username != null) {
+                        context.Add(user);
+                        var query = await context.SaveChangesAsync();
+                        var result = (query > 0) ? "Guardado Correctamente" : "No se pudo Guardar";
+                        return result;
+                    }
+                    return $"Ya existe un usuario con este \nmismo UserName con id: {username.Id}";
                 }
             }
             catch(Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        public static async Task<string> UnlockUser(Usuario user)
+        {
+            try
+            {
+                using(var context =  new SeguridadInformaticaContext())
+                {
+                    return "";
+                }
+
+            }catch(Exception ex)
             {
                 return ex.Message;
             }
