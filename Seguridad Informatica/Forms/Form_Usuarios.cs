@@ -38,6 +38,7 @@ namespace Seguridad_Informatica.Forms
             this.Invoke(new Action(() =>
             {
                 DataGridUsuarios.DataSource = listausuarios;
+                LoadDatagridRoles();
             }));
         }
 
@@ -78,29 +79,28 @@ namespace Seguridad_Informatica.Forms
                 if (DataGridViewRoles.Rows[e.RowIndex].Cells[0].Value.ToString() == string.Empty)
                 {
                     ClearTextBoxes();
-                    MessageBox.Show("Elija una fila válida.");
-                    ButtonAgregarRol.Enabled = true;
-                    ButtonRevocarRol.Enabled = false;
-                    ButtonHabilitarRol.Enabled = false;
+                    EnabledButtons(false);
                 }
                 else
                 {
-                    var id = DataGridUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    RolId = byte.Parse(DataGridUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString());
-                    ButtonAgregarRol.Enabled = false;
-                    ButtonRevocarRol.Enabled = true;
-                    ButtonHabilitarRol.Enabled = true;
+                    RolId = byte.Parse(DataGridViewRoles.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    EnabledButtons(true);
                 }
             }
             catch
             {
                 ClearTextBoxes();
-                MessageBox.Show("Elija una fila válida.");
-                ButtonAgregarRol.Enabled = true;
-                ButtonRevocarRol.Enabled = false;
-                ButtonHabilitarRol.Enabled = false;
+                EnabledButtons(false);
             }
         }
+
+        private void EnabledButtons(bool state)
+        {
+            ButtonAgregarRol.Enabled = !state;
+            ButtonRevocarRol.Enabled = state;
+            ButtonHabilitarRol.Enabled = state;
+        }
+
 
         private void DataGridUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -171,6 +171,7 @@ namespace Seguridad_Informatica.Forms
         {
             try
             {
+                EnabledButtons(false);
                 RolId = byte.Parse(ComboBoxRol.SelectedValue.ToString());
             }
             catch
@@ -211,9 +212,7 @@ namespace Seguridad_Informatica.Forms
             await Task.Run(() => { AgregarPermiso(); });
             this.Invoke(new Action(() =>
             {
-                ButtonAgregarRol.Enabled = true;
-                ButtonRevocarRol.Enabled = true;
-                ButtonHabilitarRol.Enabled = true;
+                EnabledButtons(false);
             }));
         }
 
@@ -228,9 +227,7 @@ namespace Seguridad_Informatica.Forms
             await Task.Run(() => { RevocarPermiso(); });
             this.Invoke(new Action(() =>
             {
-                ButtonAgregarRol.Enabled = true;
-                ButtonRevocarRol.Enabled = true;
-                ButtonHabilitarRol.Enabled = true;
+                EnabledButtons(true);
             }));
         }
 
@@ -245,13 +242,11 @@ namespace Seguridad_Informatica.Forms
             await Task.Run(() => { HabilitarPermiso(); });
             this.Invoke(new Action(() =>
             {
-                ButtonAgregarRol.Enabled = true;
-                ButtonRevocarRol.Enabled = true;
-                ButtonHabilitarRol.Enabled = true;
+                EnabledButtons(true);
             }));
         }
-
         #endregion
+
 
         #region Metodos
         private async void AgregarPermiso()

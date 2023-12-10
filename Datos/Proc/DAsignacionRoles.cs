@@ -22,6 +22,7 @@ namespace Datos.Proc
                                                 join ur in context.RolUsuarios on u.Id equals ur.IdUsuario
                                                 join r in context.Roles on ur.IdRol equals r.Id
                                                 where u.Id.Equals(user.Id)
+                                                orderby ur.Id
                                                 orderby ur.Activo descending
                                                 select new RolDTO {
                                                     Id = r.Id,

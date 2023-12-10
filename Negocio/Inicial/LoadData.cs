@@ -65,6 +65,7 @@ namespace Negocio.Inicial
                 UsuarioRegistro = 1,
                 FechaRegistro = DateTime.Now
             });
+            roles.Reverse();
             context.AddRange(roles);
             context.SaveChanges();
         }

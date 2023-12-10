@@ -108,6 +108,18 @@ namespace Datos.Proc
                         usuario.FechaActualizacion = user.FechaActualizacion;
                         context.Entry(usuario).State = EntityState.Modified;
                         var query = await context.SaveChangesAsync();
+
+                        if (query > 0)
+                        {
+                           var rolesusuarios = await context.RolUsuarios.Where(a => a.IdUsuario.Equals(user.Id)).ToListAsync();
+                            foreach(var role in rolesusuarios)
+                            {
+                                role.Activo = false;
+                                role.UsuarioActualiza=user.UsuarioActualiza;
+                                role.FechaActualizacion=user.FechaActualizacion;
+                            }
+                             await context.SaveChangesAsync();
+                        }
                         var result = (query > 0) ? "Eliminado Correctamente" : "No se pudo Eliminar";
                         return result;
                     }

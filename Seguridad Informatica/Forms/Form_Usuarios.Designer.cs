@@ -34,9 +34,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Usuarios));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -46,9 +43,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -63,16 +57,16 @@
             TextBoxNombre = new Guna.UI2.WinForms.Guna2TextBox();
             panel1 = new Panel();
             LabelTitle = new Label();
-            DataGridUsuarios = new Guna.UI2.WinForms.Guna2DataGridView();
             ButtonAgregar = new Guna.UI2.WinForms.Guna2Button();
             ButtonEditar = new Guna.UI2.WinForms.Guna2Button();
             ButtonEliminar = new Guna.UI2.WinForms.Guna2Button();
             ComboBoxRol = new Guna.UI2.WinForms.Guna2ComboBox();
             LabelRol = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            DataGridViewRoles = new Guna.UI2.WinForms.Guna2DataGridView();
             ButtonAgregarRol = new Guna.UI2.WinForms.Guna2Button();
             ButtonRevocarRol = new Guna.UI2.WinForms.Guna2Button();
             ButtonHabilitarRol = new Guna.UI2.WinForms.Guna2Button();
+            DataGridUsuarios = new DataGridView();
+            DataGridViewRoles = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DataGridUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DataGridViewRoles).BeginInit();
@@ -190,61 +184,6 @@
             LabelTitle.TabIndex = 0;
             LabelTitle.Text = "Administración de Usuarios";
             // 
-            // DataGridUsuarios
-            // 
-            DataGridUsuarios.AllowUserToAddRows = false;
-            DataGridUsuarios.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            DataGridUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            DataGridUsuarios.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            DataGridUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            DataGridUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            DataGridUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            DataGridUsuarios.GridColor = Color.FromArgb(231, 229, 255);
-            DataGridUsuarios.Location = new Point(23, 205);
-            DataGridUsuarios.Name = "DataGridUsuarios";
-            DataGridUsuarios.ReadOnly = true;
-            DataGridUsuarios.RowHeadersVisible = false;
-            DataGridUsuarios.RowTemplate.Height = 25;
-            DataGridUsuarios.Size = new Size(504, 185);
-            DataGridUsuarios.TabIndex = 18;
-            DataGridUsuarios.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            DataGridUsuarios.ThemeStyle.AlternatingRowsStyle.Font = null;
-            DataGridUsuarios.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            DataGridUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            DataGridUsuarios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataGridUsuarios.ThemeStyle.BackColor = Color.White;
-            DataGridUsuarios.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            DataGridUsuarios.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            DataGridUsuarios.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            DataGridUsuarios.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            DataGridUsuarios.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DataGridUsuarios.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridUsuarios.ThemeStyle.HeaderStyle.Height = 4;
-            DataGridUsuarios.ThemeStyle.ReadOnly = true;
-            DataGridUsuarios.ThemeStyle.RowsStyle.BackColor = Color.White;
-            DataGridUsuarios.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataGridUsuarios.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            DataGridUsuarios.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            DataGridUsuarios.ThemeStyle.RowsStyle.Height = 25;
-            DataGridUsuarios.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            DataGridUsuarios.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            DataGridUsuarios.CellClick += DataGridUsuarios_CellClick;
-            // 
             // ButtonAgregar
             // 
             ButtonAgregar.BorderRadius = 6;
@@ -324,7 +263,7 @@
             ComboBoxRol.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             ComboBoxRol.ForeColor = Color.FromArgb(68, 88, 112);
             ComboBoxRol.ItemHeight = 30;
-            ComboBoxRol.Location = new Point(557, 122);
+            ComboBoxRol.Location = new Point(573, 122);
             ComboBoxRol.Name = "ComboBoxRol";
             ComboBoxRol.ShadowDecoration.CustomizableEdges = customizableEdges14;
             ComboBoxRol.Size = new Size(230, 36);
@@ -336,66 +275,11 @@
             LabelRol.BackColor = Color.Transparent;
             LabelRol.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             LabelRol.ForeColor = SystemColors.ControlDarkDark;
-            LabelRol.Location = new Point(557, 94);
+            LabelRol.Location = new Point(573, 94);
             LabelRol.Name = "LabelRol";
             LabelRol.Size = new Size(25, 22);
             LabelRol.TabIndex = 22;
             LabelRol.Text = "Rol";
-            // 
-            // DataGridViewRoles
-            // 
-            DataGridViewRoles.AllowUserToAddRows = false;
-            DataGridViewRoles.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            DataGridViewRoles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            DataGridViewRoles.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            DataGridViewRoles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            DataGridViewRoles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            DataGridViewRoles.DefaultCellStyle = dataGridViewCellStyle6;
-            DataGridViewRoles.GridColor = Color.FromArgb(231, 229, 255);
-            DataGridViewRoles.Location = new Point(557, 205);
-            DataGridViewRoles.Name = "DataGridViewRoles";
-            DataGridViewRoles.ReadOnly = true;
-            DataGridViewRoles.RowHeadersVisible = false;
-            DataGridViewRoles.RowTemplate.Height = 25;
-            DataGridViewRoles.Size = new Size(318, 185);
-            DataGridViewRoles.TabIndex = 24;
-            DataGridViewRoles.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            DataGridViewRoles.ThemeStyle.AlternatingRowsStyle.Font = null;
-            DataGridViewRoles.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            DataGridViewRoles.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            DataGridViewRoles.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            DataGridViewRoles.ThemeStyle.BackColor = Color.White;
-            DataGridViewRoles.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            DataGridViewRoles.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            DataGridViewRoles.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Sunken;
-            DataGridViewRoles.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            DataGridViewRoles.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            DataGridViewRoles.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridViewRoles.ThemeStyle.HeaderStyle.Height = 4;
-            DataGridViewRoles.ThemeStyle.ReadOnly = true;
-            DataGridViewRoles.ThemeStyle.RowsStyle.BackColor = Color.White;
-            DataGridViewRoles.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataGridViewRoles.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            DataGridViewRoles.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            DataGridViewRoles.ThemeStyle.RowsStyle.Height = 25;
-            DataGridViewRoles.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            DataGridViewRoles.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            DataGridViewRoles.CellClick += DataGridViewRoles_CellClick;
             // 
             // ButtonAgregarRol
             // 
@@ -408,7 +292,7 @@
             ButtonAgregarRol.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ButtonAgregarRol.ForeColor = Color.White;
             ButtonAgregarRol.ImageAlign = HorizontalAlignment.Left;
-            ButtonAgregarRol.Location = new Point(554, 172);
+            ButtonAgregarRol.Location = new Point(570, 172);
             ButtonAgregarRol.Name = "ButtonAgregarRol";
             ButtonAgregarRol.ShadowDecoration.CustomizableEdges = customizableEdges16;
             ButtonAgregarRol.Size = new Size(92, 23);
@@ -427,7 +311,7 @@
             ButtonRevocarRol.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ButtonRevocarRol.ForeColor = Color.White;
             ButtonRevocarRol.ImageAlign = HorizontalAlignment.Left;
-            ButtonRevocarRol.Location = new Point(652, 172);
+            ButtonRevocarRol.Location = new Point(668, 172);
             ButtonRevocarRol.Name = "ButtonRevocarRol";
             ButtonRevocarRol.ShadowDecoration.CustomizableEdges = customizableEdges18;
             ButtonRevocarRol.Size = new Size(92, 23);
@@ -446,7 +330,7 @@
             ButtonHabilitarRol.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             ButtonHabilitarRol.ForeColor = Color.White;
             ButtonHabilitarRol.ImageAlign = HorizontalAlignment.Left;
-            ButtonHabilitarRol.Location = new Point(750, 172);
+            ButtonHabilitarRol.Location = new Point(766, 172);
             ButtonHabilitarRol.Name = "ButtonHabilitarRol";
             ButtonHabilitarRol.ShadowDecoration.CustomizableEdges = customizableEdges20;
             ButtonHabilitarRol.Size = new Size(92, 23);
@@ -454,21 +338,53 @@
             ButtonHabilitarRol.Text = "Habilitar";
             ButtonHabilitarRol.Click += ButtonHabilitarRol_Click;
             // 
+            // DataGridUsuarios
+            // 
+            DataGridUsuarios.AllowUserToAddRows = false;
+            DataGridUsuarios.AllowUserToDeleteRows = false;
+            DataGridUsuarios.AllowUserToOrderColumns = true;
+            DataGridUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGridUsuarios.BackgroundColor = SystemColors.ButtonHighlight;
+            DataGridUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridUsuarios.GridColor = SystemColors.ButtonHighlight;
+            DataGridUsuarios.Location = new Point(25, 205);
+            DataGridUsuarios.Name = "DataGridUsuarios";
+            DataGridUsuarios.ReadOnly = true;
+            DataGridUsuarios.RowTemplate.Height = 25;
+            DataGridUsuarios.Size = new Size(502, 192);
+            DataGridUsuarios.TabIndex = 28;
+            DataGridUsuarios.CellClick += DataGridUsuarios_CellClick;
+            // 
+            // DataGridViewRoles
+            // 
+            DataGridViewRoles.AllowUserToAddRows = false;
+            DataGridViewRoles.AllowUserToDeleteRows = false;
+            DataGridViewRoles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DataGridViewRoles.BackgroundColor = SystemColors.ButtonHighlight;
+            DataGridViewRoles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridViewRoles.Location = new Point(558, 206);
+            DataGridViewRoles.Name = "DataGridViewRoles";
+            DataGridViewRoles.ReadOnly = true;
+            DataGridViewRoles.RowTemplate.Height = 25;
+            DataGridViewRoles.Size = new Size(309, 191);
+            DataGridViewRoles.TabIndex = 29;
+            DataGridViewRoles.CellClick += DataGridViewRoles_CellClick;
+            // 
             // Form_Usuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(896, 422);
+            Controls.Add(DataGridViewRoles);
+            Controls.Add(DataGridUsuarios);
             Controls.Add(ButtonHabilitarRol);
             Controls.Add(ButtonRevocarRol);
             Controls.Add(ButtonAgregarRol);
-            Controls.Add(DataGridViewRoles);
             Controls.Add(ComboBoxRol);
             Controls.Add(LabelRol);
             Controls.Add(ButtonEliminar);
             Controls.Add(ButtonEditar);
             Controls.Add(ButtonAgregar);
-            Controls.Add(DataGridUsuarios);
             Controls.Add(panel1);
             Controls.Add(LabelUsuario);
             Controls.Add(LabelCorreo);
@@ -498,15 +414,15 @@
         private Guna.UI2.WinForms.Guna2TextBox TextBoxNombre;
         private Panel panel1;
         private Label LabelTitle;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGridUsuarios;
         private Guna.UI2.WinForms.Guna2Button ButtonAgregar;
         private Guna.UI2.WinForms.Guna2Button ButtonEditar;
         private Guna.UI2.WinForms.Guna2Button ButtonEliminar;
         private Guna.UI2.WinForms.Guna2ComboBox ComboBoxRol;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelRol;
-        private Guna.UI2.WinForms.Guna2DataGridView DataGridViewRoles;
         private Guna.UI2.WinForms.Guna2Button ButtonAgregarRol;
         private Guna.UI2.WinForms.Guna2Button ButtonRevocarRol;
         private Guna.UI2.WinForms.Guna2Button ButtonHabilitarRol;
+        private DataGridView DataGridUsuarios;
+        private DataGridView DataGridViewRoles;
     }
 }
