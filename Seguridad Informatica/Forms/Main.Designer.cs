@@ -72,7 +72,7 @@
             PanelOptions.Location = new Point(0, 57);
             PanelOptions.Name = "PanelOptions";
             PanelOptions.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            PanelOptions.Size = new Size(165, 349);
+            PanelOptions.Size = new Size(165, 422);
             PanelOptions.TabIndex = 0;
             // 
             // ButtonPermisos
@@ -171,7 +171,7 @@
             PanelHead.Location = new Point(0, 0);
             PanelHead.Name = "PanelHead";
             PanelHead.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            PanelHead.Size = new Size(774, 57);
+            PanelHead.Size = new Size(1061, 57);
             PanelHead.TabIndex = 1;
             // 
             // labelTitle
@@ -237,14 +237,14 @@
             panelcontainer.Dock = DockStyle.Fill;
             panelcontainer.Location = new Point(165, 57);
             panelcontainer.Name = "panelcontainer";
-            panelcontainer.Size = new Size(609, 349);
+            panelcontainer.Size = new Size(896, 422);
             panelcontainer.TabIndex = 2;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(774, 406);
+            ClientSize = new Size(1061, 479);
             Controls.Add(panelcontainer);
             Controls.Add(PanelOptions);
             Controls.Add(PanelHead);

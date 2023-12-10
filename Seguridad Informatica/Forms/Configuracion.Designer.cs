@@ -37,7 +37,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(242, 138);
+            pictureBox1.Location = new Point(381, 168);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(136, 134);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -49,7 +49,7 @@
             LabelHead.BackColor = Color.Transparent;
             LabelHead.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             LabelHead.ForeColor = SystemColors.ControlDarkDark;
-            LabelHead.Location = new Point(211, 69);
+            LabelHead.Location = new Point(350, 99);
             LabelHead.Name = "LabelHead";
             LabelHead.Size = new Size(190, 34);
             LabelHead.TabIndex = 19;
@@ -59,7 +59,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(609, 349);
+            ClientSize = new Size(896, 422);
             Controls.Add(pictureBox1);
             Controls.Add(LabelHead);
             FormBorderStyle = FormBorderStyle.None;

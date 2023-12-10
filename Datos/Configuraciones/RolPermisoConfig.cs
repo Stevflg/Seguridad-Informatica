@@ -18,7 +18,8 @@ namespace Datos.Configuraciones
 
                 builder.ToTable("RolPermiso");
 
-                builder.Property(e => e.Id).HasColumnName("ID");
+                builder.Property(e => e.Id).HasColumnName("ID")
+                .ValueGeneratedOnAdd();
                 builder.Property(e => e.FechaActualizacion).HasColumnType("datetime");
                 builder.Property(e => e.FechaRegistro).HasColumnType("datetime");
 

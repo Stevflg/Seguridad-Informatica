@@ -16,7 +16,10 @@ namespace Datos.Configuraciones
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {         
                 builder.HasKey(e => e.Id).HasName("PK__Usuarios__3214EC27A61A16C9");
-                builder.Property(e => e.Id).HasColumnName("ID");
+                
+                builder.Property(e => e.Id).HasColumnName("ID")
+                .ValueGeneratedOnAdd();
+                builder.HasIndex(e => e.Login).IsUnique();
                 builder.Property(e => e.CambiarPassword).HasDefaultValueSql("((0))");
                 builder.Property(e => e.Correo)
                     .HasMaxLength(200)

@@ -106,7 +106,8 @@ namespace Seguridad_Informatica
         {
             this.Invoke(new Action(() => { ButtonGuardar.Enabled = false; }));
             await Task.Run(() => { Create(); });
-            this.Invoke(new Action(() => { ButtonGuardar.Enabled = true;  }));
+            this.Invoke(new Action(() => { ButtonGuardar.Enabled = true;
+            }));
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Datos.Configuraciones
                 builder.Property(e => e.Id)
                     .ValueGeneratedOnAdd()
                     .HasColumnName("ID");
+                builder.HasIndex(e => e.Rol).IsUnique();
                 builder.Property(e => e.FechaActualizacion).HasColumnType("datetime");
                 builder.Property(e => e.FechaRegistro).HasColumnType("datetime");
                 builder.Property(e => e.Rol)

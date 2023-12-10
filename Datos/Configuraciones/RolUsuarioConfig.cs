@@ -15,12 +15,15 @@ namespace Datos.Configuraciones
         public void Configure(EntityTypeBuilder<RolUsuario> builder)
         {
                 builder.HasKey(e => e.Id).HasName("PK__RolUsuar__3214EC270437CA4A");
+                builder.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 builder.ToTable("RolUsuario");
 
                 builder.Property(e => e.Id).HasColumnName("ID");
                 builder.Property(e => e.FechaActualizacion).HasColumnType("datetime");
-                builder.Property(e => e.FechaRegistro).HasColumnType("datetime");
+                builder.Property(e => e.FechaRegistro).HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+                builder.Property(e => e.Activo).HasDefaultValue(true);
 
                 builder.HasOne(d => d.IdRolNavigation).WithMany(p => p.RolUsuarios)
                     .HasForeignKey(d => d.IdRol)

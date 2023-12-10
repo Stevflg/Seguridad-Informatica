@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration.Internal;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,6 +44,11 @@ namespace Negocio.Procedimientos
         public static async Task<Usuario> GetUsarioId(Usuario user)
         {
            return await DUsuarios.GetUsarioId(user);
+        }
+
+        public static async Task<string> UnlockUser(Usuario user)
+        {
+            return await DUsuarios.UnlockUser(user);
         }
     }
 }

@@ -56,7 +56,7 @@
             LabelHead.BackColor = Color.Transparent;
             LabelHead.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
             LabelHead.ForeColor = SystemColors.ControlDarkDark;
-            LabelHead.Location = new Point(271, 12);
+            LabelHead.Location = new Point(410, 27);
             LabelHead.Name = "LabelHead";
             LabelHead.Size = new Size(75, 23);
             LabelHead.TabIndex = 16;
@@ -76,7 +76,7 @@
             ComboBoxUsuario.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             ComboBoxUsuario.ForeColor = Color.FromArgb(68, 88, 112);
             ComboBoxUsuario.ItemHeight = 30;
-            ComboBoxUsuario.Location = new Point(73, 93);
+            ComboBoxUsuario.Location = new Point(212, 108);
             ComboBoxUsuario.Name = "ComboBoxUsuario";
             ComboBoxUsuario.ShadowDecoration.CustomizableEdges = customizableEdges2;
             ComboBoxUsuario.Size = new Size(192, 36);
@@ -88,7 +88,7 @@
             LabelUsuario.BackColor = Color.Transparent;
             LabelUsuario.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             LabelUsuario.ForeColor = SystemColors.ControlDarkDark;
-            LabelUsuario.Location = new Point(73, 69);
+            LabelUsuario.Location = new Point(212, 84);
             LabelUsuario.Name = "LabelUsuario";
             LabelUsuario.Size = new Size(56, 22);
             LabelUsuario.TabIndex = 18;
@@ -99,7 +99,7 @@
             LabelRol.BackColor = Color.Transparent;
             LabelRol.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             LabelRol.ForeColor = SystemColors.ControlDarkDark;
-            LabelRol.Location = new Point(274, 69);
+            LabelRol.Location = new Point(413, 84);
             LabelRol.Name = "LabelRol";
             LabelRol.Size = new Size(25, 22);
             LabelRol.TabIndex = 19;
@@ -119,7 +119,7 @@
             ComboBoxRol.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             ComboBoxRol.ForeColor = Color.FromArgb(68, 88, 112);
             ComboBoxRol.ItemHeight = 30;
-            ComboBoxRol.Location = new Point(271, 93);
+            ComboBoxRol.Location = new Point(410, 108);
             ComboBoxRol.Name = "ComboBoxRol";
             ComboBoxRol.ShadowDecoration.CustomizableEdges = customizableEdges4;
             ComboBoxRol.Size = new Size(151, 36);
@@ -151,7 +151,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             DataGridViewPermiso.DefaultCellStyle = dataGridViewCellStyle3;
             DataGridViewPermiso.GridColor = Color.FromArgb(231, 229, 255);
-            DataGridViewPermiso.Location = new Point(69, 151);
+            DataGridViewPermiso.Location = new Point(208, 166);
             DataGridViewPermiso.Name = "DataGridViewPermiso";
             DataGridViewPermiso.ReadOnly = true;
             DataGridViewPermiso.RowHeadersVisible = false;
@@ -194,7 +194,7 @@
             ButtonEliminar.ForeColor = Color.White;
             ButtonEliminar.Image = (Image)resources.GetObject("ButtonEliminar.Image");
             ButtonEliminar.ImageAlign = HorizontalAlignment.Left;
-            ButtonEliminar.Location = new Point(452, 106);
+            ButtonEliminar.Location = new Point(591, 121);
             ButtonEliminar.Name = "ButtonEliminar";
             ButtonEliminar.ShadowDecoration.CustomizableEdges = customizableEdges6;
             ButtonEliminar.Size = new Size(92, 23);
@@ -215,7 +215,7 @@
             ButtonAgregar.ForeColor = Color.White;
             ButtonAgregar.Image = (Image)resources.GetObject("ButtonAgregar.Image");
             ButtonAgregar.ImageAlign = HorizontalAlignment.Left;
-            ButtonAgregar.Location = new Point(452, 77);
+            ButtonAgregar.Location = new Point(591, 92);
             ButtonAgregar.Name = "ButtonAgregar";
             ButtonAgregar.ShadowDecoration.CustomizableEdges = customizableEdges8;
             ButtonAgregar.Size = new Size(92, 23);
@@ -228,7 +228,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(609, 349);
+            ClientSize = new Size(896, 422);
             Controls.Add(ButtonEliminar);
             Controls.Add(ButtonAgregar);
             Controls.Add(DataGridViewPermiso);

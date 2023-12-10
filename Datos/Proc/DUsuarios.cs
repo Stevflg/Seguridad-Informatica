@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration.Internal;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,14 +21,10 @@ namespace Datos.Proc
             {
                using(var context =new SeguridadInformaticaContext())
                 {
-                    var username = context.Usuarios.Find(user.Correo);
-                    if(username != null) {
                         context.Add(user);
                         var query = await context.SaveChangesAsync();
                         var result = (query > 0) ? "Guardado Correctamente" : "No se pudo Guardar";
                         return result;
-                    }
-                    return $"Ya existe un usuario con este \nmismo UserName con id: {username.Id}";
                 }
             }
             catch(Exception ex)
@@ -41,7 +38,27 @@ namespace Datos.Proc
             {
                 using(var context =  new SeguridadInformaticaContext())
                 {
-                    return "";
+                    var getrol = await (from u in context.Usuarios
+                                        join ur in context.RolUsuarios on u.Id equals ur.IdUsuario
+                                      where u.Id.Equals(user.Id) && ur.IdRol.Equals(1)
+                                      select ur).FirstOrDefaultAsync();   
+                    if(getrol != null)
+                    {
+                        var usuario = await context.Usuarios.FindAsync(user.Correo);
+                        if(usuario != null)
+                        {
+                            usuario.Password = user.Password;
+                            usuario.Bloqueado = false;
+                            usuario.Contador = 0;
+                            usuario.UsuarioActualiza = user.UsuarioActualiza;
+                            usuario.FechaActualizacion = user.FechaActualizacion;
+                            context.Entry(usuario).State= EntityState.Modified;
+                            var query = await context.SaveChangesAsync();
+                            var result = (query > 0) ? "Contraseña reestablecida correctamente" : "No se pudo reestablecer contraseña";
+                            return result;
+                        }
+                    }
+                    return "Usuario no posee los permisos suficientes \nPara realizar esta accion";
                 }
 
             }catch(Exception ex)

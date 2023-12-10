@@ -1,5 +1,6 @@
 using Datos.Context;
 using Negocio.Inicial;
+using Negocio.Procedimientos;
 using Seguridad_Informatica.Forms;
 
 namespace Seguridad_Informatica
@@ -15,11 +16,10 @@ namespace Seguridad_Informatica
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            var context = new SeguridadInformaticaContext();
-            context.Database.EnsureCreated();
+            NDatabase.CreateDatabase();
             var ld = new LoadData();
             ld.InsertData();
-            if(!context.Usuarios.Any()) { Registrar fr = new Registrar(); fr.ShowDialog(); }
+            if(!NDatabase.UsersAny()) { Registrar fr = new Registrar(); fr.ShowDialog(); }
             Application.Run(new Inicio_Sesion());
         }
     }

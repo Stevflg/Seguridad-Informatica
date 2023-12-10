@@ -1,4 +1,5 @@
 ﻿using Dominio.Entidades;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -15,6 +16,7 @@ namespace Datos.Configuraciones
         public void Configure(EntityTypeBuilder<RolFormulario> builder)
         {
                 builder.HasKey(e => e.Id).HasName("PK__RolFormu__3214EC27322700AE");
+                builder.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 builder.ToTable("RolFormulario");
 
