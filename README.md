@@ -5,3 +5,4 @@ Integrantes:
             Brandon Isaac Cruz Reyes 
             Byron Steven Flores Gaitan
             Roberto David Morales Ramos
+            Joel Aburto Sanchez
